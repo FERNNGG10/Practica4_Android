@@ -1,16 +1,110 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity2">
-
-
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="HOLA DESDE VISTA 2 FORMA EXPLICITA"
-        ></TextView>
+        android:layout_height="100dp"
+        android:orientation="vertical"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/back2">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tittle"
+            android:textColor="@color/white"
+            android:textSize="30sp"/>
+
+        <TextView
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/sub"
+            android:textColor="@color/white"
+            android:textSize="20sp"/>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/implicitos"
+        android:layout_width="300dp"
+        android:background="@drawable/otrobackground"
+        android:layout_height="300dp"
+        android:layout_centerInParent="true">
+
+        <TextView
+            android:id="@+id/txtexpli"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Intent Implicitos"
+            android:textSize="20sp"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/black"></TextView>
+
+        <Button
+            android:id="@+id/btni1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtexpli"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="30dp"
+            android:backgroundTint="@color/light_purple"
+            android:text="Explicito 1"></Button>
+
+        <Button
+            android:id="@+id/btni2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btni1"
+            android:layout_centerInParent="true"
+            android:backgroundTint="@color/light_purple"
+            android:text="Explicito 2"></Button>
+        <Button
+            android:id="@+id/btni3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btni2"
+            android:text="Explicito 3"
+            android:backgroundTint="@color/light_purple"
+            android:layout_centerInParent="true"></Button>
+
+        <Button
+            android:id="@+id/btni4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btni3"
+            android:text="Explicito 4"
+            android:backgroundTint="@color/light_purple"
+            android:layout_centerInParent="true"></Button>
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btni5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/implicitos"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="30dp"
+        android:text="Ir a explicitos"></Button>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="vertical"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="false"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/back3">
+    </LinearLayout>
+
+
+
+</RelativeLayout>
