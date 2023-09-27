@@ -1,5 +1,6 @@
 package com.example.practica4_android;
 
+
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -32,6 +33,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View v) {
 
         if(v.getId()==R.id.btn1) {
+            //import android.net.Uri;
+            //String url = "https://www.youtube.com/watch?v=wSb7mJbnHuk"; esto es implicito
+           // Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
+            //startActivity(intent);
 
         } else if (v.getId()==R.id.btn2) {
 
