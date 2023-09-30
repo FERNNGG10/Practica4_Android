@@ -63,7 +63,8 @@ public class MainActivity2 extends AppCompatActivity implements View.OnClickList
         }
         else if (v.getId()==R.id.btni4)
         {
-
+            Intent abrircamara = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+            startActivity(abrircamara);
         }
         else if (v.getId()==R.id.btni5)
         {

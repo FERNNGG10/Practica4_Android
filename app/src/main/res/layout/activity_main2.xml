@@ -56,7 +56,7 @@
             android:layout_centerInParent="true"
             android:layout_marginTop="30dp"
             android:backgroundTint="@color/light_purple"
-            android:text="Explicito 1"></Button>
+            android:text="Implicito 1"></Button>
 
         <Button
             android:id="@+id/btni2"
@@ -65,13 +65,13 @@
             android:layout_below="@+id/btni1"
             android:layout_centerInParent="true"
             android:backgroundTint="@color/light_purple"
-            android:text="Explicito 2"></Button>
+            android:text="Implicito 2"></Button>
         <Button
             android:id="@+id/btni3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/btni2"
-            android:text="Explicito 3"
+            android:text="Implicito 3"
             android:backgroundTint="@color/light_purple"
             android:layout_centerInParent="true"></Button>
 
@@ -80,7 +80,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/btni3"
-            android:text="Explicito 4"
+            android:text="Implicito 4"
             android:backgroundTint="@color/light_purple"
             android:layout_centerInParent="true"></Button>
     </RelativeLayout>
@@ -104,6 +104,7 @@
         android:layout_alignParentBottom="true"
         android:background="@drawable/back3">
     </LinearLayout>
+
 
 
 

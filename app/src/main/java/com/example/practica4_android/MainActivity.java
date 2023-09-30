@@ -9,10 +9,12 @@ import android.provider.MediaStore;
 import android.view.View;
 import android.widget.Button;
 import android.net.Uri;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
     Button btn1,btn2,btn3,btn4,implicito;
+    TextView txt;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,6 +24,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btn2=(Button) findViewById(R.id.btn2);
         btn3=(Button) findViewById(R.id.btn3);
         btn4=(Button) findViewById(R.id.btn4);
+        txt = findViewById(R.id.textView);
         implicito = (Button) findViewById(R.id.btn5);
         btn1.setOnClickListener(this);
         btn2.setOnClickListener(this);
@@ -37,18 +40,30 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         if(v.getId()==R.id.btn1) {
 
+            Intent llamada = new Intent(Intent.ACTION_DIAL);
+            llamada.setData(Uri.parse("tel:8713267638"));
+            startActivity(llamada);
+
 
         } else if (v.getId()==R.id.btn2) {
 
-            Intent abrircamara = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-            startActivity(abrircamara);
+            Intent intent = new Intent(Intent.ACTION_SEND);
+            intent.setType("text/plain");
+            intent.putExtra(Intent.EXTRA_TEXT, "Este es un mensaje de ejemplo.");
+            intent.setPackage("com.whatsapp");
+            startActivity(intent);
+
         }
         else if (v.getId()==R.id.btn3) {
 
-            Intent llamada = new Intent(Intent.ACTION_DIAL);
-            startActivity(llamada);
+            Intent intent = new Intent(Intent.ACTION_VIEW);
+            intent.setData(Uri.parse("https://docs.adonisjs.com/guides/middleware"));
+            intent.setPackage("com.opera.gx");
+            startActivity(intent);
         }
         else if (v.getId()==R.id.btn4) {
+            Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("fb://page/your_page_id"));
+            startActivity(intent);
 
         }
         else if (v.getId()==R.id.btn5) {
