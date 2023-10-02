@@ -13,7 +13,7 @@ import android.net.Uri;
 
 public class MainActivity2 extends AppCompatActivity implements View.OnClickListener{
 
-    Button btni1,btni2,btni3,btni4,btni5;
+    Button btni1,btni2,btni3,btni4;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,12 +23,12 @@ public class MainActivity2 extends AppCompatActivity implements View.OnClickList
         btni2 = (Button) findViewById(R.id.btni2);
         btni3 = (Button) findViewById(R.id.btni3);
         btni4 = (Button) findViewById(R.id.btni4);
-        btni5 = (Button) findViewById(R.id.btni5);
+
         btni1.setOnClickListener(this);
         btni2.setOnClickListener(this);
         btni3.setOnClickListener(this);
         btni4.setOnClickListener(this);
-        btni5.setOnClickListener(this);
+
 
     }
 
@@ -66,9 +66,6 @@ public class MainActivity2 extends AppCompatActivity implements View.OnClickList
             Intent abrircamara = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
             startActivity(abrircamara);
         }
-        else if (v.getId()==R.id.btni5)
-        {
-            startActivity(new Intent(this, MainActivity.class));
-        }
+
     }
 }

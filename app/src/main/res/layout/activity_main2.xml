@@ -85,15 +85,6 @@
             android:layout_centerInParent="true"></Button>
     </RelativeLayout>
 
-    <Button
-        android:id="@+id/btni5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/implicitos"
-        android:layout_centerInParent="true"
-        android:layout_marginTop="30dp"
-        android:text="Ir a explicitos"></Button>
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="50dp"
